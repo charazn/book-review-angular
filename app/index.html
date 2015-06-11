@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,32 +12,33 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-<!--   <link rel="stylesheet" href="app.css"> -->
+  <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body ng-app="bookReview">
-  <h1>A simple Book Review app made with Angular.js</h1>
-  <div class="row" ng-controller="bookController as bookCtrl">
-    <button class="btn btn-default">Create Review</button>
-    <review-form></review-form>
-    <hr>
-    <ul class="list-unstyled col-sm-8">
-      <li class="row" ng-repeat="book in bookCtrl.books">
-        <book-cover></book-cover>
-        <div class="col-sm-9">
-          <h3><a href="amazon link">{{book.title}}</a></h3>
-          <cite class="text-muted">Written by {{book.author}}</cite>
-          <p></p>
-          <p>{{book.review}}</p>
-          <book-genres></book-genres>
-        </div>
-      </li>
-    </ul>
+  <div class="container">
+    <h1>A simple Book Review app made with Angular.js</h1>
+    <div class="row" ng-controller="bookController as bookCtrl">
+      <button class="btn btn-default">Create Review</button>
+      <review-form></review-form>
+      <hr>
+      <ul class="list-unstyled col-sm-8">
+        <li class="row" ng-repeat="book in bookCtrl.books">
+          <book-cover></book-cover>
+          <div class="col-sm-9">
+            <h3><a href="amazon link">{{book.title}}</a></h3>
+            <cite class="text-muted">Written by {{book.author}}</cite>
+            <p></p>
+            <p>{{book.review}}</p>
+            <book-genres genres="book.genres"></book-genres>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-
+  <script src="js/app.js"></script>
 </body>
 </html>
