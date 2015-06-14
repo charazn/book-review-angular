@@ -20,8 +20,8 @@
     <h1>A simple Book Review app made with Angular.js</h1>
     <div class="row" ng-controller="bookController as bookCtrl">
       <div class="container">
-        <button class="btn btn-default" ng-click="reviewFormCtrl.showForm = !reviewFormCtrl.showForm">{{reviewFormCtrl.showForm ? "Hide" : "Create Review"}}</button>
-        <review-form ng-show="reviewFormCtrl.showForm"></review-form>
+        <button class="btn btn-default" ng-click="reviewFormCtrl.showForm = !reviewFormCtrl.showForm">{{reviewFormCtrl.showForm ? "Hide Form" : "Create Review"}}</button>
+        <review-form books="bookCtrl.books" genres="bookCtrl.genres" ng-show="reviewFormCtrl.showForm"></review-form>
         <hr>
       </div>
       <ul class="container list-unstyled">

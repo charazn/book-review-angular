@@ -31,10 +31,15 @@
       restrict: 'E',
       templateUrl: 'partials/review-form.html',
       replace: true,
-      controller: function(){
+      controller: function(){ 
         this.showForm = false;
+        this.book = {};
       },
-      controllerAs: 'reviewFormCtrl'
+      controllerAs: 'reviewFormCtrl', 
+      scope: {
+        books: '=',
+        genres: '='
+      }
     }
   });
 
