@@ -7,22 +7,22 @@
   <form class="col-sm-6">
     <div class="form-group">
       <label for="title">Title</label>
-      <input type="text" class="form-control" id="title" placeholder="Enter Title of Book" >
+      <input type="text" class="form-control" id="title" placeholder="Enter Title of Book" ng-model="{{reviewFormCtrl.book.title}}">
     </div>
 
     <div class="form-group">
       <label for="isbn">ISBN</label>
-      <input type="text" class="form-control" id="isbn" placeholder="Enter 10 digit ISBN Number" >
+      <input type="text" class="form-control" id="isbn" placeholder="Enter 10 digit ISBN Number" ng-model="{{reviewFormCtrl.book.isbn}}">
     </div>
 
     <div class="form-group">
       <label for="author">Author</label>
-      <input type="text" class="form-control" id="author" placeholder="Enter Name of Author" >
+      <input type="text" class="form-control" id="author" placeholder="Enter Name of Author" ng-model="{{reviewFormCtrl.book.author}}">
     </div>
 
     <div class="form-group">
       <label for="review">Review</label>
-      <textarea class="form-control" id="review" placeholder="Write your review here" ></textarea>
+      <textarea class="form-control" id="review" placeholder="Write your review here" ng-model="{{reviewFormCtrl.book.review}}"></textarea>
     </div>
 
     <div class="form-group">
